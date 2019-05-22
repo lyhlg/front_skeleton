@@ -1,6 +1,16 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 
 module.exports = {
+  entry: "./src/index.tsx",
+  output: {
+    filename: "bundle.js",
+    path: __dirname + "/dist"
+  },
+  devtool: "source-map",
+  resolve: {
+    // Add '.ts' and '.tsx' as resolvable extensions.
+    extensions: [".ts", ".tsx", ".js", ".json"]
+  },
   module: {
     rules: [
       {
@@ -17,8 +27,21 @@ module.exports = {
             loader: "html-loader"
           }
         ]
-      }
+      },
+      {
+        test: /\.tsx?$/,
+        loader: "ts-loader"
+      },
+      {
+        enforce: "pre",
+        test: /\.js$/,
+        loader: "source-map-loader"
+      },
     ]
+  },
+  externals: {
+    "react": "React",
+    "react-dom": "ReactDOM"
   },
   plugins: [
     new HtmlWebPackPlugin({
