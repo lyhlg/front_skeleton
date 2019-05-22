@@ -16,12 +16,17 @@
     "babel-loader": "^8.0.6",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
+    "source-map-loader": "^0.2.4",
+    "ts-loader": "^6.0.1",
     "webpack": "^4.32.1",
     "webpack-cli": "^3.3.2",
     "webpack-dev-server": "^3.4.1"
   },
   "dependencies": {
+    "@types/react": "^16.8.18",
+    "@types/react-dom": "^16.8.4",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react-dom": "^16.8.6",
+    "typescript": "^3.4.5"
   }
 }
