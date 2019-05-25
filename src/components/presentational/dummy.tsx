@@ -1,1 +1,7 @@
-const dummy: number = 1;
+const dummy = 1;
+
+function a(): number {
+  return dummy;
+}
+
+export { a };
