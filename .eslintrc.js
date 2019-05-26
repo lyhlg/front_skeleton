@@ -7,6 +7,7 @@ module.exports = {
   parser: '@typescript-eslint/parser', // Specifies the ESLint parser
 
   extends: [
+    'airbnb',
     'plugin:react/recommended', // Uses the recommended rules from @eslint-plugin-react
     'plugin:@typescript-eslint/recommended', // Uses the recommended rules from @typescript-eslint/eslint-plugin
     'prettier/@typescript-eslint', // Uses eslint-config-prettier to disable ESLint rules from @typescript-eslint/eslint-plugin that would conflict with prettier
@@ -27,13 +28,16 @@ module.exports = {
     '@typescript-eslint/explicit-function-return-type': 0,
     'react/jsx-one-expression-per-line': ['<disabled>', { allow: 'none' | 'literal' | 'single-child' }],
     'no-confusing-arrow': ['error', { allowParens: true }],
-    // Place to specify ESLint rules. Can be used to overwrite rules specified from the extended configs
-    // e.g. "@typescript-eslint/explicit-function-return-type": "off",
+    'react/jsx-filename-extension': [1, { 'extensions': ['.js', '.jsx', 'ts', 'tsx'] }]
   },
 
   settings: {
     react: {
       version: 'detect', // Tells eslint-plugin-react to automatically detect the version of React to use
     },
+    'import/resolver': {
+      'webpack': {
+        'config': './config/webpack-common-config.js'
+      }
   },
-};
+}
