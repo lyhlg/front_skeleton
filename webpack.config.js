@@ -1,4 +1,5 @@
 const HtmlWebPackPlugin = require('html-webpack-plugin');
+const path = require('path');
 
 module.exports = {
   entry: './src/index.tsx',
@@ -9,6 +10,12 @@ module.exports = {
   devtool: 'source-map',
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.json'],
+    alias: {
+      '@': path.resolve(__dirname, 'src/'),
+      '@image': path.resolve(__dirname, 'public/img/'),
+      '@components': path.resolve(__dirname, 'src/components/'),
+      '@containers': path.resolve(__dirname, 'src/containers/'),
+    },
   },
   module: {
     rules: [
