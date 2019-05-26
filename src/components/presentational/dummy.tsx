@@ -1,7 +1,5 @@
 const dummy = 1;
 
-function a(): number {
+export const a = (): number => {
   return dummy;
-}
-
-export { a };
+};
