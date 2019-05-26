@@ -3,9 +3,15 @@ const path = require('path');
 
 module.exports = {
   entry: './src/index.tsx',
+  // output: {
+  //   filename: 'bundle.js',
+  //   path: __dirname + '/dist/assets',
+  // },
   output: {
-    filename: 'bundle.js',
-    path: __dirname + '/dist',
+    path: path.resolve(__dirname, './dist'),
+    filename: '[name].[hash].js',
+    chunkFilename: '[name].[chunkhash].js',
+    publicPath: '/dist',
   },
   devtool: 'source-map',
   resolve: {
@@ -45,10 +51,6 @@ module.exports = {
       },
     ],
   },
-  // externals: {
-  //   react: 'React',
-  //   'react-dom': 'ReactDOM',
-  // },
   plugins: [
     new HtmlWebPackPlugin({
       template: './public/index.html',
