@@ -6,8 +6,9 @@
   "author": "darren.lee",
   "license": "MIT",
   "scripts": {
-    "start": "webpack-dev-server --open --mode development",
-    "build": "webpack --mode production"
+    "start": "webpack-dev-server --progress --profile --colors --env=dev",
+    "build:prod": "webpack --profile --colors --mode production",
+    "build:dev": "webpack --profile --colors --mode development --env=dev"
   },
   "devDependencies": {
     "@babel/core": "^7.4.5",
