@@ -1,13 +1,20 @@
-import * as React from 'react';
-import TodoList from '@containers/TodoList';
+import React from 'react';
+import { createGlobalStyle } from 'styled-components';
+
 import Header from '@containers/Header';
 
-class App extends React.Component {
+import reset from '@/style-guide/reset';
+
+const GlobalStyle = createGlobalStyle`
+  ${reset}
+`;
+
+class App extends React.PureComponent {
   render() {
     return (
       <div>
+        <GlobalStyle />
         <Header />
-        {/* <TodoList /> */}
       </div>
     );
   }

@@ -15,6 +15,7 @@
     "@babel/preset-env": "^7.4.5",
     "@babel/preset-react": "^7.0.0",
     "@types/react-redux": "^7.0.9",
+    "@types/styled-components": "^4.1.15",
     "@typescript-eslint/eslint-plugin": "^1.9.0",
     "@typescript-eslint/parser": "^1.9.0",
     "babel-loader": "^8.0.6",
@@ -43,6 +44,7 @@
     "react-dom": "^16.8.6",
     "react-redux": "^7.0.3",
     "redux": "^4.0.1",
+    "styled-components": "^4.2.0",
     "typescript": "^3.4.5"
   }
 }
