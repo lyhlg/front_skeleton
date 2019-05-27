@@ -28,7 +28,8 @@ module.exports = {
     '@typescript-eslint/explicit-function-return-type': 0,
     'react/jsx-one-expression-per-line': ['<disabled>', { allow: 'none' | 'literal' | 'single-child' }],
     'no-confusing-arrow': ['error', { allowParens: true }],
-    'react/jsx-filename-extension': [1, { 'extensions': ['.js', '.jsx', 'ts', 'tsx'] }]
+    'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx', 'ts', 'tsx'] }],
+    'import/order': ['error', { 'newlines-between': 'always' }],
   },
 
   settings: {
@@ -36,8 +37,9 @@ module.exports = {
       version: 'detect', // Tells eslint-plugin-react to automatically detect the version of React to use
     },
     'import/resolver': {
-      'webpack': {
-        'config': './config/webpack-common-config.js'
-      }
+      webpack: {
+        config: './webpack.config.js',
+      },
+    },
   },
-}
+};
