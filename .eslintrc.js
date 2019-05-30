@@ -29,6 +29,7 @@ module.exports = {
     'react/jsx-one-expression-per-line': ['<disabled>', { allow: 'none' | 'literal' | 'single-child' }],
     'no-confusing-arrow': ['error', { allowParens: true }],
     'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx', 'ts', 'tsx'] }],
+    'react/prop-types': 0,
     'import/order': ['error', { 'newlines-between': 'always' }],
   },
 

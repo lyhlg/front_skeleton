@@ -1,0 +1,4 @@
+/src/store/configuresStore.ts
+dist/*
+node_modules/*
+**/*.js

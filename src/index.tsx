@@ -5,6 +5,8 @@ import { Provider } from 'react-redux';
 import App from './App';
 import configureStore from './store/configureStore';
 
+import * as registerServiceWorker from '@/registerServiceWorker';
+
 const store = configureStore();
 
 ReactDOM.render(
@@ -13,3 +15,6 @@ ReactDOM.render(
   </Provider>,
   document.getElementById('root'),
 );
+
+// console.log(registerServiceWorker);
+registerServiceWorker.register();
