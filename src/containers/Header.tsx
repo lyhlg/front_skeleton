@@ -1,7 +1,9 @@
 import React from 'react';
 import Styled from 'styled-components';
 
-interface HeaderProps {}
+import CounterContainer from './CounterContainer';
+
+// interface HeaderProps {}
 
 const list = ['암호화폐 거래소', '선물 거래소', '코인세일', '지갑계정'];
 
@@ -36,7 +38,7 @@ const HeaderWrapper = Styled.header`
   }
 `;
 
-const Header: React.SFC<HeaderProps> = () => {
+const Header: React.SFC<{}> = () => {
   return (
     <HeaderWrapper>
       <ul>
@@ -45,6 +47,7 @@ const Header: React.SFC<HeaderProps> = () => {
         ))}
       </ul>
       <p>darren</p>
+      <CounterContainer />
     </HeaderWrapper>
   );
 };

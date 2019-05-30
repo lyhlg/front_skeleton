@@ -5,7 +5,6 @@ module.exports = {
   entry: './src/index.tsx',
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
-    compress: true,
     port: 8080,
     inline: true,
     hot: true,

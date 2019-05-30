@@ -1,10 +1,11 @@
 import { combineReducers } from 'redux';
-import { TodoState, todoReducer as todos } from './todos';
+
+import counter, { CounterState } from './counter';
 
 export interface StoreState {
-  todos: TodoState;
+  counter: CounterState;
 }
 
 export default combineReducers<StoreState>({
-  todos,
+  counter,
 });
